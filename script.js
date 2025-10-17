@@ -79,3 +79,8 @@ async function loadProfile() {
 }
 
 window.addEventListener('DOMContentLoaded', loadProfile);
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide && lucide.createIcons) lucide.createIcons();
+});
+

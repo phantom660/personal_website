@@ -6,6 +6,7 @@
   <title>Tamojit Bera · Portfolio</title>
   <meta name="description" content="Tamojit Bera — Software Engineering & AI Portfolio" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- GSAP + ScrollTrigger -->
@@ -49,9 +50,15 @@
           From GenAI recommenders to vision-based anomaly detection for CPS — I like shipping fast, reliable software.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a id="resumeLink" class="btn-primary" href="./assets/Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
-          <a id="githubLink" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
-          <a id="linkedinLink" class="btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+          <a id="resumeLink" class="btn-primary" href="./assets/Resume.pdf" target="_blank" rel="noopener">
+            <i data-lucide="file-text" class="w-4 h-4"></i><span>Download Résumé</span>
+          </a>
+          <a id="githubLink" class="btn-secondary" target="_blank" rel="noopener">
+            <i data-lucide="github" class="w-5 h-5"></i><span>GitHub</span>
+          </a>
+          <a id="linkedinLink" class="btn-secondary" target="_blank" rel="noopener">
+            <i data-lucide="linkedin" class="w-5 h-5"></i><span>LinkedIn</span>
+          </a>
         </div>
       </div>
       <div class="md:col-span-2">
@@ -93,21 +100,26 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="reveal-section max-w-6xl mx-auto px-6 py-14">
-    <h2 class="section-heading">Contact</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="space-y-2 text-slate-300">
-        <p>Email: <a id="emailLink" class="text-cyan-300 underline"></a></p>
-        <p>Location: <span id="locText"></span></p>
-      </div>
-      <form class="glass p-4 rounded-xl space-y-3" netlify>
-        <input class="input" type="text" name="name" placeholder="Name" required />
-        <input class="input" type="email" name="email" placeholder="Email" required />
-        <textarea class="input h-32" name="message" placeholder="Your message..." required></textarea>
-        <button class="btn-primary w-full" type="submit">Send</button>
+  <section id="contact" class="reveal-section max-w-5xl mx-auto px-6 py-16">
+    <h2 class="section-heading text-center">Contact Me</h2>
+    <p class="text-slate-400 text-center mb-8">
+      Open to collaborations, internships, and research opportunities.
+    </p>
+
+    <div class="glass rounded-2xl p-8 md:p-10 mx-auto max-w-3xl">
+      <form class="space-y-4" netlify>
+        <div class="grid md:grid-cols-2 gap-4">
+          <input class="input" type="text" name="name" placeholder="Your Name" required />
+          <input class="input" type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <textarea class="input h-36" name="message" placeholder="Your Message..." required></textarea>
+        <button class="btn-primary w-full md:w-auto px-8" type="submit">
+          <i data-lucide="send" class="w-4 h-4"></i><span>Send Message</span>
+        </button>
       </form>
     </div>
   </section>
+
 
   <footer class="text-center text-sm text-slate-500 py-8">
     © <span id="year"></span> Tamojit Bera · Built with ♥ and GSAP
