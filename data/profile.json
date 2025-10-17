@@ -1,0 +1,140 @@
+{
+  "name": "Tamojit Bera",
+  "pronouns": "He/Him",
+  "headline": "SWE & AI Intern @ Attention.ad · Research Assistant · CS @ UMN",
+  "location": "Minneapolis, Minnesota, United States",
+  "email": "bera0041@umn.edu",
+  "phone": "+1 (612) 559-1187",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/tamojit-bera-1a380b251",
+    "github": "https://github.com/phantom660"
+  },
+  "about": "I build intelligent and secure software that ships. My work spans recommendation systems, vision-based anomaly detection for CPS, and full‑stack tooling for simulation and visualization.",
+  "education": [
+    {
+      "school": "University of Minnesota – Twin Cities",
+      "degree": "B.S. in Computer Science",
+      "dates": "Sep 2022 – Dec 2026",
+      "gpa": "3.947",
+      "highlights": [
+        "Dean’s List (F22, S23, F23, S24, F24, S25)",
+        "Global Excellence Scholarship"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Undergraduate Research Assistant",
+      "org": "Minnesota Robotics Institute (UMN)",
+      "dates": "Jan 2025 – Present",
+      "bullets": [
+        "Engineered AI-driven object detection on NVIDIA Jetson to detect, track, and deter wildlife.",
+        "Team won 'Excellence in Small Farms Tech' (Air Category) at Farm Robotics Challenge 2025."
+      ]
+    },
+    {
+      "role": "Research Intern — CPS Security",
+      "org": "Georgia Institute of Technology",
+      "dates": "Jun 2025 – Aug 2025",
+      "bullets": [
+        "Designed a vision-based anomaly detection pipeline for Directed Energy Deposition (DED) printing."
+      ]
+    },
+    {
+      "role": "Software Engineering & AI Intern",
+      "org": "Attention.ad",
+      "dates": "Jun 2025 – Aug 2025",
+      "bullets": [
+        "Spearheaded GenAI-driven recommendation systems for blockchain-based creator platforms."
+      ]
+    },
+    {
+      "role": "Software Engineering Intern",
+      "org": "Athrv Cloud Pvt. Ltd.",
+      "dates": "Jun 2024 – Aug 2024",
+      "bullets": [
+        "Built GenAI frameworks to optimize and classify bug reports in embedded C/C++ codebases."
+      ]
+    },
+    {
+      "role": "Undergraduate Teaching Assistant",
+      "org": "UMN — CSCI 1133, 2041, 2033",
+      "dates": "Sep 2023 – Present",
+      "bullets": [
+        "Supported 200+ students in programming principles and linear algebra."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Visual Transit Simulator",
+      "stack": [
+        "Java",
+        "Node.js",
+        "React",
+        "Gradle"
+      ],
+      "desc": "Built a large-scale transit simulator with realistic schedules, routing, and live visualization."
+    },
+    {
+      "name": "AI Agents for Connect‑4",
+      "stack": [
+        "Python",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "desc": "Implemented Minimax + Alpha‑Beta and MCTS agents; ran 600+ self‑play benchmarks."
+    },
+    {
+      "name": "Image Matching System",
+      "stack": [
+        "C",
+        "POSIX Threads",
+        "Sockets",
+        "Mutex"
+      ],
+      "desc": "Multithreaded client–server image matcher with efficient storage and concurrent requests."
+    },
+    {
+      "name": "Facial Recognition (Eigenfaces)",
+      "stack": [
+        "OpenCV",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "desc": "Eigenfaces model with dimensionality reduction and evaluation pipeline."
+    }
+  ],
+  "skills": [
+    "Python",
+    "Java",
+    "Kotlin",
+    "C",
+    "C++",
+    "OCaml",
+    "SQL",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Express",
+    "OpenCV",
+    "DeepSORT",
+    "scikit‑learn",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Android Studio",
+    "Docker",
+    "AWS",
+    "GitHub",
+    "Grafana",
+    "InfluxDB",
+    "IBM Granite",
+    "Firebase",
+    "Computer Vision",
+    "NVIDIA Jetson",
+    "Static Analysis",
+    "Embedded Systems",
+    "Telemetry Systems"
+  ]
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tamojit Bera · Portfolio</title>
+  <meta name="description" content="Tamojit Bera — Software Engineering & AI Portfolio" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- VanillaTilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="font-[Inter] bg-slate-950 text-slate-100">
+  <!-- Animated gradient background -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-1/3 -left-1/3 w-[120vmax] h-[120vmax] animate-slowspin rounded-full bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.2),rgba(99,102,241,0.15),transparent_70%)] blur-3xl"></div>
+  </div>
+
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-950/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-lg font-extrabold tracking-tight">tamojit.dev</a>
+      <nav class="space-x-4 text-sm">
+        <a href="#about" class="hover:text-cyan-300">About</a>
+        <a href="#experience" class="hover:text-cyan-300">Experience</a>
+        <a href="#projects" class="hover:text-cyan-300">Projects</a>
+        <a href="#skills" class="hover:text-cyan-300">Skills</a>
+        <a href="#contact" class="hover:text-cyan-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-10">
+    <div class="grid md:grid-cols-5 gap-8 items-center">
+      <div class="md:col-span-3">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Hi, I'm <span class="text-cyan-300">Tamojit</span>.<br/>
+          I build intelligent & secure systems.
+        </h1>
+        <p class="mt-4 text-slate-300 text-lg">
+          From GenAI recommenders to vision-based anomaly detection for CPS — I like shipping fast, reliable software.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a id="resumeLink" class="btn-primary" href="./assets/Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          <a id="githubLink" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          <a id="linkedinLink" class="btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="tilt-card group relative mx-auto w-56 h-56 rounded-2xl bg-slate-900/60 shadow-xl ring-1 ring-white/10 overflow-hidden">
+          <img id="avatarImg" alt="Portrait" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3 text-sm text-slate-300">
+            <div id="nameTag" class="font-semibold"></div>
+            <div id="headlineTag" class="text-slate-400"></div>
+            <div id="locationTag" class="text-slate-500"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="reveal-section max-w-6xl mx-auto px-6 py-12">
+    <h2 class="section-heading">About</h2>
+    <p id="aboutCopy" class="text-slate-300 max-w-3xl"></p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="reveal-section max-w-6xl mx-auto px-6 py-12">
+    <h2 class="section-heading">Experience</h2>
+    <div id="experienceGrid" class="grid md:grid-cols-2 gap-6"></div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="reveal-section max-w-6xl mx-auto px-6 py-12">
+    <h2 class="section-heading">Projects</h2>
+    <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="reveal-section max-w-6xl mx-auto px-6 py-12">
+    <h2 class="section-heading">Skills</h2>
+    <div id="skillsWrap" class="flex flex-wrap gap-2"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="reveal-section max-w-6xl mx-auto px-6 py-14">
+    <h2 class="section-heading">Contact</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="space-y-2 text-slate-300">
+        <p>Email: <a id="emailLink" class="text-cyan-300 underline"></a></p>
+        <p>Location: <span id="locText"></span></p>
+      </div>
+      <form class="glass p-4 rounded-xl space-y-3" netlify>
+        <input class="input" type="text" name="name" placeholder="Name" required />
+        <input class="input" type="email" name="email" placeholder="Email" required />
+        <textarea class="input h-32" name="message" placeholder="Your message..." required></textarea>
+        <button class="btn-primary w-full" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm text-slate-500 py-8">
+    © <span id="year"></span> Tamojit Bera · Built with ♥ and GSAP
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
