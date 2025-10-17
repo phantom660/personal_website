@@ -8,7 +8,9 @@ async function loadProfile() {
   document.getElementById('headlineTag').textContent = p.headline;
   document.getElementById('locationTag').textContent = p.location;
 
-  document.getElementById('aboutCopy').textContent = p.about;
+  const aboutEl = document.getElementById('aboutCopy');
+  aboutEl.style.whiteSpace = 'pre-wrap';
+  aboutEl.textContent = p.about.replace(/\\n/g, '\n').trim();
 
   document.getElementById('linkedinLink').href = p.links.linkedin;
   document.getElementById('githubLink').href = p.links.github;
