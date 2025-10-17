@@ -12,8 +12,8 @@ async function loadProfile() {
 
   document.getElementById('linkedinLink').href = p.links.linkedin;
   document.getElementById('githubLink').href = p.links.github;
-  // document.getElementById('emailLink').textContent = p.email;
-  // document.getElementById('emailLink').href = 'mailto:' + p.email;
+  document.getElementById('emailLink').textContent = p.email;
+  document.getElementById('emailLink').href = 'mailto:' + p.email;
   document.getElementById('locText').textContent = p.location;
 
   const year = new Date().getFullYear();
