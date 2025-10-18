@@ -82,6 +82,15 @@ async function loadProfile() {
       });
     }
 
+    // Skills
+    const sw = document.getElementById('skillsWrap');
+    p.skills.forEach(s => {
+      const chip = document.createElement('span');
+      chip.className = 'px-3 py-1 rounded-full bg-slate-800/80 ring-1 ring-white/5 text-sm';
+      chip.textContent = s;
+      sw.appendChild(chip);
+    });
+
     // Projects preview (home page)
     // const pg = document.getElementById('projectsGrid');
     // if (pg && p.projects) {
