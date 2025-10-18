@@ -107,7 +107,7 @@
       "desc": "Engineered competitive AI agents using Greedy heuristics, Minimax with Alpha-Beta Pruning, and Monte Carlo Tree Search; benchmarked over 600+ self-play matches to assess strategic depth and computational efficiency. Optimized evaluation heuristics and introduced stochasticity to avoid repetitive trajectories, resulting in a 90%+ win rate for the top-performing Minimax agent.",
       "links": [
         { "label": "Paper (PDF)", "url": "./assets/AI_Agents_for_Connect-4.pdf" },
-        { "label": "GitHub", "url": "https://github.com/phantom660/connect4-agents" }
+        { "label": "GitHub", "url": "https://github.com/phantom660/connect-4" }
       ]
     },
     {
@@ -123,7 +123,7 @@
       "stack": ["C (Programming Language)", "POSIX", "Threads", "Sockets", "Mutex"],
       "desc": "Implemented a multithreaded client–server model using sockets and mutexes for concurrent requests. Developed efficient matching algorithms and modular database storage for scalable performance.",
       "links": [
-        { "label": "GitHub", "url": "https://github.com/phantom660/image-matching-system" }
+        { "label": "GitHub", "url": "https://github.com/phantom660/ImageDetection" }
       ]
     },
     {
@@ -131,7 +131,7 @@
       "stack": ["Express.js", "MySQL", "PugJS"],
       "desc": "Constructed a full-stack task manager with authentication, categorization, and live updates. Streamlined backend with optimized queries and implemented responsive, intuitive front-end.",
       "links": [
-        { "label": "GitHub", "url": "https://github.com/phantom660/todo-webapp" }
+        { "label": "GitHub", "url": "https://github.com/phantom660/To-Do-List" }
       ]
     },
     {
@@ -139,7 +139,7 @@
       "stack": ["Java", "Node.js", "Gradle", "React.js"],
       "desc": "Architected a comprehensive transit system simulating realistic bus/train schedules, routing, and traffic. Deployed interactive UI with dynamic visualizations and real-time performance metrics.",
       "links": [
-        { "label": "GitHub", "url": "https://github.com/phantom660/visual-transit-sim" }
+        { "label": "GitHub", "url": "https://github.com/phantom660/VisualTransitSimulator" }
       ]
     }
   ],
