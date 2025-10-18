@@ -111,35 +111,63 @@ async function loadProfile() {
     function render() {
       const q = (search?.value || '').toLowerCase();
       grid.innerHTML = '';
+
+      // helper: turn desc string into bullet <li> items
+      const toBullets = (text) => {
+        // split on period+space, semicolons, or newlines; filter short fragments
+        return text
+          .split(/(?:\.\s+|;\s+|\n+)/)
+          .map(s => s.trim())
+          .filter(s => s.length > 2);
+      };
+
       p.projects
-        .filter(pr => (!q || pr.name.toLowerCase().includes(q) || pr.desc.toLowerCase().includes(q)))
-        .filter(pr => (active.size === 0 || pr.stack.some(s => active.has(s))))
+        .filter(pr => {
+          const hay = (pr.name + ' ' + pr.desc + ' ' + pr.stack.join(' ')).toLowerCase();
+          return !q || hay.includes(q);
+        })
+        .filter(pr => active.size === 0 || pr.stack.some(s => active.has(s)))
         .forEach(pr => {
           const card = document.createElement('article');
           card.className = 'tilt-card glass rounded-2xl p-5 ring-1 ring-white/5 hover:-translate-y-1 transition transform';
-          card.innerHTML = `
+
+          // header + stack
+          const headerHtml = `
             <h3 class="text-lg font-bold">${pr.name}</h3>
             <div class="mt-1 text-slate-400 text-sm">${pr.stack.join(' • ')}</div>
-            <p class="mt-2 text-slate-300">${pr.desc}</p>
           `;
+
+          // bullets
+          const bullets = toBullets(pr.desc);
+          const bulletsHtml = bullets.length
+            ? `<ul class="mt-3 list-disc ml-5 space-y-1 text-slate-300">
+                ${bullets.map(b => `<li>${b}${/[\.\!]$/.test(b) ? '' : ''}</li>`).join('')}
+              </ul>`
+            : `<p class="mt-2 text-slate-300">${pr.desc}</p>`;
+
+          card.innerHTML = headerHtml + bulletsHtml;
+
+          // link buttons (PDF / GitHub / Demo)
+          if (Array.isArray(pr.links) && pr.links.length) {
+            const btnRow = document.createElement('div');
+            btnRow.className = 'mt-3 flex flex-wrap gap-2';
+            pr.links.forEach(l => {
+              const a = document.createElement('a');
+              a.href = l.url;
+              a.target = '_blank';
+              a.rel = 'noopener';
+              a.className = 'btn-secondary';
+              a.textContent = l.label;
+              btnRow.appendChild(a);
+            });
+            card.appendChild(btnRow);
+          }
+
           grid.appendChild(card);
           VanillaTilt.init(card, { max: 8, speed: 400, glare: true, 'max-glare': 0.25 });
         });
-      if (pr.links && Array.isArray(pr.links) && pr.links.length) {
-        const btnRow = document.createElement('div');
-        btnRow.className = 'mt-3 flex flex-wrap gap-2';
-        pr.links.forEach(l => {
-          const a = document.createElement('a');
-          a.href = l.url;
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.className = 'btn-secondary';
-          a.textContent = l.label;
-          btnRow.appendChild(a);
-        });
-        card.appendChild(btnRow);
-      }
     }
+
 
     // Build filter chips
     allStacks.forEach(s => {

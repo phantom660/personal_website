@@ -106,28 +106,41 @@
       "stack": ["Python (Programming Language)", "NumPy", "Matplotlib", "AI Agents", "Heuristic Evaluation", "Heuristic Analysis"],
       "desc": "Engineered competitive AI agents using Greedy heuristics, Minimax with Alpha-Beta Pruning, and Monte Carlo Tree Search; benchmarked over 600+ self-play matches to assess strategic depth and computational efficiency. Optimized evaluation heuristics and introduced stochasticity to avoid repetitive trajectories, resulting in a 90%+ win rate for the top-performing Minimax agent.",
       "links": [
-        { "label": "A Comparative Study of AI Agents for Connect-4 (PDF)", "url": "./assets/AI_Agents_for_Connect-4.pdf" }
+        { "label": "Paper (PDF)", "url": "./assets/AI_Agents_for_Connect-4.pdf" },
+        { "label": "GitHub", "url": "https://github.com/phantom660/connect4-agents" }
       ]
     },
     {
       "name": "Facial Recognition Model",
       "stack": ["OpenCV", "Matplotlib", "NumPy", "Colab"],
-      "desc": "Engineered a facial recognition system using eigenfaces with dimensionality reduction. Visualized results through Matplotlib, improving interpretability and analytical insights."
+      "desc": "Engineered a facial recognition system using eigenfaces with dimensionality reduction. Visualized results through Matplotlib, improving interpretability and analytical insights.",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/phantom660/eigenfaces" }
+      ]
     },
     {
       "name": "Image Matching System",
       "stack": ["C (Programming Language)", "POSIX", "Threads", "Sockets", "Mutex"],
-      "desc": "Implemented a multithreaded client–server model using sockets and mutexes for concurrent requests. Developed efficient matching algorithms and modular database storage for scalable performance."
+      "desc": "Implemented a multithreaded client–server model using sockets and mutexes for concurrent requests. Developed efficient matching algorithms and modular database storage for scalable performance.",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/phantom660/image-matching-system" }
+      ]
     },
     {
       "name": "To-Do List Web Application",
       "stack": ["Express.js", "MySQL", "PugJS"],
-      "desc": "Constructed a full-stack task manager with authentication, categorization, and live updates. Streamlined backend with optimized queries and implemented responsive, intuitive front-end."
+      "desc": "Constructed a full-stack task manager with authentication, categorization, and live updates. Streamlined backend with optimized queries and implemented responsive, intuitive front-end.",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/phantom660/todo-webapp" }
+      ]
     },
     {
       "name": "Visual Transit Simulator",
       "stack": ["Java", "Node.js", "Gradle", "React.js"],
-      "desc": "Architected a comprehensive transit system simulating realistic bus/train schedules, routing, and traffic. Deployed interactive UI with dynamic visualizations and real-time performance metrics."
+      "desc": "Architected a comprehensive transit system simulating realistic bus/train schedules, routing, and traffic. Deployed interactive UI with dynamic visualizations and real-time performance metrics.",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/phantom660/visual-transit-sim" }
+      ]
     }
   ],
   "awards": [
