@@ -83,20 +83,20 @@ async function loadProfile() {
     }
 
     // Projects preview (home page)
-    const pg = document.getElementById('projectsGrid');
-    if (pg && p.projects) {
-      p.projects.slice(0, 6).forEach(pr => {
-        const card = document.createElement('article');
-        card.className = 'tilt-card glass rounded-2xl p-5 ring-1 ring-white/5 hover:-translate-y-1 transition transform';
-        card.innerHTML = `
-          <h3 class="text-lg font-bold">${pr.name}</h3>
-          <div class="mt-1 text-slate-400 text-sm">${pr.stack.join(' • ')}</div>
-          <p class="mt-2 text-slate-300">${pr.desc}</p>
-        `;
-        pg.appendChild(card);
-        VanillaTilt.init(card, { max: 8, speed: 400, glare: true, 'max-glare': 0.25 });
-      });
-    }
+    // const pg = document.getElementById('projectsGrid');
+    // if (pg && p.projects) {
+    //   p.projects.slice(0, 6).forEach(pr => {
+    //     const card = document.createElement('article');
+    //     card.className = 'tilt-card glass rounded-2xl p-5 ring-1 ring-white/5 hover:-translate-y-1 transition transform';
+    //     card.innerHTML = `
+    //       <h3 class="text-lg font-bold">${pr.name}</h3>
+    //       <div class="mt-1 text-slate-400 text-sm">${pr.stack.join(' • ')}</div>
+    //       <p class="mt-2 text-slate-300">${pr.desc}</p>
+    //     `;
+    //     pg.appendChild(card);
+    //     VanillaTilt.init(card, { max: 8, speed: 400, glare: true, 'max-glare': 0.25 });
+    //   });
+    // }
   }
 
   // Projects page
@@ -125,6 +125,20 @@ async function loadProfile() {
           grid.appendChild(card);
           VanillaTilt.init(card, { max: 8, speed: 400, glare: true, 'max-glare': 0.25 });
         });
+      if (pr.links && Array.isArray(pr.links) && pr.links.length) {
+        const btnRow = document.createElement('div');
+        btnRow.className = 'mt-3 flex flex-wrap gap-2';
+        pr.links.forEach(l => {
+          const a = document.createElement('a');
+          a.href = l.url;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.className = 'btn-secondary';
+          a.textContent = l.label;
+          btnRow.appendChild(a);
+        });
+        card.appendChild(btnRow);
+      }
     }
 
     // Build filter chips
